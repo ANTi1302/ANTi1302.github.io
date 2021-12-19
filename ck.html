@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    
+    <title> Sample CK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="CSS/bootstrap.css" />
+    <script type="text/javascript" src="JS/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="JS/bootstrap.js"></script>
+    <script type="text/javascript" src="JS/Script1.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <header class="col-md-12">
+                <img src="Images/banner-5.png" width="100%" />
+            </header>
+            <div class="row">
+                <nav class="col-md-12">
+                    <div class="navbar navbar-inverse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Web online</a></li>
+                            <li class="active"><a href="#">Home</a></li>
+
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Product</a></li>
+                                    <li><a href="#" data-toggle="modal" data-target="#mymodal">Voucher</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="row">
+                <section class="col-md-12">
+                    <div class="col-md-12">
+                        <h1 align="center">KHÁCH HÀNG ĐĂNG KÝ NHẬN VOUCHER</h1>
+                    </div>
+                    <div class="col-md-12">
+                        <table class="table table-hover" id="dulieu">
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên khách hàng</th>
+                                <th>Ngày sinh</th>
+                                <th>Email</th>
+                                <th>Số điện thoại</th>
+                                <th>Địa chỉ</th>
+                                <th>Thành phố</th>
+                                <th>Giới tính</th>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            <div class="row">
+                <footer class="col-md-12" style="border-top:1px solid #000000">
+                    <address align="center">****</address>
+                </footer>
+            </div>
+    </div>
+        <!---form modal-->
+        <div id="mymodal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h2 align="center"> THÔNG TIN KHÁCH HÀNG</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form id="form1" >
+                            <div class="form-group">
+                                <label>Họ tên:</label>
+                                <input type="text" class="form-control" id="txtten" onblur="ktten()" /><span id="ten" style="color:red"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Ngày sinh:</label>
+                                <input type="date" class="form-control" id="txtns"  onblur="kiemtraNS()"/><span id="ns" style="color:red"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Email:</label>
+                                <input type="text" class="form-control" id="txtmail"  onblur="kiemtramail()"/><span id="mail" style="color:red"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Số điện thoại:</label>
+                                <input type="text" class="form-control" id="txtsdt"   onblur="kiemtrasdt()"/><span id="sdt" style="color:red"></span>
+                               
+                            </div>
+                            <div class="form-group">
+                                <label>Địa chỉ:</label>
+                                <input type="text" class="form-control" id="txtdc"  onblur="kiemtradiachi()"/><span id="dc" style="color:red"></span>
+                                <div class="form-group">
+                                    <label for="sel1">
+                                        Select one:
+                                        <select class="form-control" id="sel1">
+                                            <option>Hồ Chí Minh</option>
+                                            <option>Hà Nội</option>
+                                            <option>Đà Nẵng</option>
+                                        </select>
+                                    </label>
+                                    <div class="form-group">
+                                        <label for="inlineRadio1">
+                                            Giới tính:
+                                            <label class="radio-inline"><input type="radio" value="Nam" name="inlineRadioOptions" id="inlineRadio1" checked="checked" />Nam</label>
+                                            <label class="radio-inline"><input type="radio" value="Nữ" name="inlineRadioOptions" id="inlineRadio1" />Nữ</label>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group">
+                            <button type="button" class="btn btn-success btn-block" id="btnluu" onclick="data()">Lưu <span id="luu"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+</body>
+</html>
